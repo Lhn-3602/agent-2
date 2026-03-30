@@ -20,54 +20,6 @@
 
 ---
 
-## 快速开始
-
-### 1. 安装依赖
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate        # Windows
-pip install -r requirements.txt
-playwright install chromium
-```
-
-### 2. 配置环境变量
-
-复制 `.env` 文件并填写必要字段：
-
-```env
-# OpenAI
-OPENAI_API_KEY=sk-...
-OPENAI_MODEL=gpt-4o-mini
-OPENAI_BASE_URL=                  # 可选，代理地址
-
-# 图片生成
-IMAGE_MODEL=gpt-image-1
-
-# 飞书多维表格（可选）
-FEISHU_APP_ID=
-FEISHU_APP_SECRET=
-FEISHU_APP_TOKEN=
-FEISHU_TABLE_ID=                  # 爬虫数据表
-FEISHU_PUBLISH_TABLE_ID=          # AI 生成笔记表
-
-# 小红书 MCP 服务（本地）
-XHS_MCP_URL=http://localhost:18060
-XHS_MCP_ENDPOINT=http://localhost:18060/mcp
-```
-
-### 3. 启动服务
-
-```bash
-uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
-```
-
-浏览器访问 `http://127.0.0.1:8000` 进入 Web UI。
-
-FastAPI 交互文档：`http://127.0.0.1:8000/docs`
-
----
-
 ## 主要 API
 
 | 路由 | 说明 |
